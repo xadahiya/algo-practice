@@ -59,7 +59,6 @@ def dfs(g, start):
     else:
         leaders[s].append(start)
     for nxt in g[start] - visited:
-        print(nxt)
         dfs(g, nxt)
     t += 1
     ft[start] = t
@@ -77,4 +76,4 @@ t = 0
 
 dfs_loop(graph, ft_sort)
 
-print(','.join(sorted(leaders, key=lambda k: len(leaders[k]), reverse=True)))
+print(','.join(str(len(leaders[k])) for k in sorted(leaders, key=lambda k: len(leaders[k]), reverse=True)))
