@@ -76,4 +76,7 @@ t = 0
 
 dfs_loop(graph, ft_sort)
 
-print(','.join(str(len(leaders[k])) for k in sorted(leaders, key=lambda k: len(leaders[k]), reverse=True)))
+
+f = open('output.txt', 'w')
+f.write(','.join(str(len(leaders[k])) for k in sorted(leaders, key=lambda k: len(leaders[k]), reverse=True)))
+f.close()
