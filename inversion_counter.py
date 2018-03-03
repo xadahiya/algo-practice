@@ -37,8 +37,9 @@ def sort_and_count(alist, len_a):
         return flist, (x+y+z)
 
 # alist = [1,3,5,2,4,6]
-text_file = open('integer_array_inversion.txt', 'r')
-alist = [int(a) for a in text_file.read().split("\n") if a != '']
+#text_file = open('integer_array_inversion.txt', 'r')
+#alist = [int(a) for a in text_file.read().split("\n") if a != '']
 # print(len(alist))
+alist = [81, 85, 69, 83, 84, 73, 79, 78]
 # print(alist)
 print("Result", sort_and_count(alist, len(alist))[1])
